@@ -1,0 +1,74 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure",
+      "score": 8
+    },
+    {
+      "criterion": "Grammar",
+      "score": 1.5
+    },
+    {
+      "criterion": "Roles",
+      "score": 5
+    },
+    {
+      "criterion": "Open and closed questions",
+      "score": 5
+    },
+    {
+      "criterion": "Questions structured",
+      "score": 4
+    },
+    {
+      "criterion": "Questions relevant",
+      "score": 5
+    },
+    {
+      "criterion": "General to specific questions",
+      "score": 5
+    },
+    {
+      "criterion": "Transcript",
+      "score": 5
+    },
+    {
+      "criterion": "Screenshots present",
+      "score": 0
+    },
+    {
+      "criterion": "Link to full board",
+      "score": 0
+    },
+    {
+      "criterion": "Table easy to read",
+      "score": 3
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants",
+      "score": 8
+    },
+    {
+      "criterion": "Summarizing critical points of interview",
+      "score": 8
+    },
+    {
+      "criterion": "Clear learning points",
+      "score": 7
+    },
+    {
+      "criterion": "Questions the team still has",
+      "score": 8
+    },
+    {
+      "criterion": "Outline of the next steps",
+      "score": 9
+    },
+    {
+      "criterion": "Recording is present",
+      "score": 0
+    }
+  ],
+  "overall_score": "80%",
+  "overall_feedback": "The submission is comprehensive with well-documented research, clear role distribution, and a detailed outline of next steps. However, it lacks visual elements like screenshots and a link to the full board, and could benefit from minor improvements in grammatical clarity and formatting."
+}

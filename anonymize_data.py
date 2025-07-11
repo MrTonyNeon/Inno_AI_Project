@@ -15,10 +15,12 @@ load_dotenv()
 
 # Set up command line arguments
 parser = argparse.ArgumentParser(description='Anonymize student papers using AI API')
-parser.add_argument('--mode', choices=['local_mode', 'local_ai', 'online_ai'], default='local_mode',
-                    help='Mode for anonymization: local_mode (pattern matching), local_ai (local model), online_ai (OpenAI API)')
+parser.add_argument('--mode', choices=['regex', 'local_ai', 'online_ai'], default='regex',
+                    help='Mode for anonymization: regex (pattern matching), local_ai (local model), online_ai (OpenAI API)')
 parser.add_argument('--max_files', type=int, default=2, help='Maximum number of files to process (default: 2)')
 parser.add_argument('--max_tokens', type=int, default=20000, help='Maximum tokens to send to API per file')
+parser.add_argument("--model", default='gpt-4.1-nano',
+                    help="Models to use for evaluation (model_name)")
 args = parser.parse_args()
 
 
@@ -77,16 +79,19 @@ def extract_text_from_file(file_path):
 def create_client():
     if args.mode != 'online_ai':
         return None
+    elif os.environ.get("AITUNNEL_API_KEY"):
+        return OpenAI(
+            api_key=os.environ["AITUNNEL_API_KEY"],
+            base_url="https://api.aitunnel.ru/v1"
+        )
     elif os.environ.get("OPENAI_API_KEY"):
         return OpenAI()
-    elif os.environ.get("AITUNNEL_API_KEY"):
-        return OpenAI(base_url="https://api.aitunnel.ru/v1")
     else:
         raise ValueError(
             "OpenAI API key must be provided via OPENAI_API_KEY environment variable when using online_ai mode")
 
 
-def anonymize_text_with_online_ai(client, text):
+def anonymize_text_with_online_ai(client, text, model_name):
     if len(text) > args.max_tokens * 4:
         print(f"Text too long ({len(text)} chars), trimming to ~{args.max_tokens} tokens")
         text = text[:args.max_tokens * 4]
@@ -106,20 +111,16 @@ def anonymize_text_with_online_ai(client, text):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=model_name,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": text}
             ],
             temperature=0,
         )
-
-        anonymized_text = response.choices[0].message.content
-
-        return anonymized_text
-
+        return response.choices[0].message.content
     except Exception as e:
-        print(f"Error with OpenAI API: {e}")
+        print(f"Error with AI model '{model_name}': {e}")
         return text
 
 
@@ -237,7 +238,7 @@ def anonymize_student_papers():
             start_time = time.time()
 
             if args.mode == 'online_ai':
-                anonymized_text = anonymize_text_with_online_ai(client, text)
+                anonymized_text = anonymize_text_with_online_ai(client, text, args.model)
             elif args.mode == 'local_ai':
                 anonymized_text = anonymize_text_with_local_ai(text)
             else:
@@ -253,7 +254,7 @@ def anonymize_student_papers():
 
             processed_files += 1
 
-            if client and not args.dry_run:
+            if client:
                 time.sleep(1)
 
         if processed_files >= args.max_files:
@@ -266,10 +267,6 @@ if __name__ == "__main__":
     print("Starting anonymization process with the following settings:")
     print(f"- Anonymization mode: {args.mode}")
     print(f"- Maximum files to process: {args.max_files}")
-
-    if args.mode == 'online_ai' and not os.environ.get("OPENAI_API_KEY"):
-        print("ERROR: No API key provided for online_ai mode. Exiting.")
-        exit(1)
 
     processed = anonymize_student_papers()
     print(f"Anonymization complete! Processed {processed} files.")

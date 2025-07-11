@@ -12,6 +12,12 @@ load_dotenv()
 
 # Set up command line arguments
 parser = argparse.ArgumentParser(description="Evaluate student submissions using AI models")
+parser.add_argument("--submissions-dir", default="anonymized_papers",
+                    help="Directory containing student submission files")
+parser.add_argument("--grades-template", default="guideline_files/Grades.csv",
+                    help="Path to grading template CSV")
+parser.add_argument("--output-dir", default="grades_results",
+                    help="Directory to save evaluation results")
 parser.add_argument("--models", nargs="+",
                     help="Models to use for evaluation (format: [provider:]model_name)")
 args = parser.parse_args()
@@ -143,8 +149,6 @@ def parse_evaluation_to_row(evaluation_result, grading_template, student_file):
 
 def main():
     os.makedirs(args.output_dir, exist_ok=True)
-
-    # Create directory to store received answers
     answers_dir = os.path.join(args.output_dir, "received_jsons")
     os.makedirs(answers_dir, exist_ok=True)
 

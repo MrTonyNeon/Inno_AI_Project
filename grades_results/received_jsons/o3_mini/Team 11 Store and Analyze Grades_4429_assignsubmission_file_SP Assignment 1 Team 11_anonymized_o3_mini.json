@@ -2,7 +2,7 @@
   "criteria": [
     {
       "criterion": "Structure (10)",
-      "score": 9
+      "score": 8
     },
     {
       "criterion": "Grammar (2)",
@@ -14,7 +14,7 @@
     },
     {
       "criterion": "Open and closed questions (5)",
-      "score": 5
+      "score": 4
     },
     {
       "criterion": "Questions structured (5)",
@@ -30,15 +30,15 @@
     },
     {
       "criterion": "Transcript (5)",
-      "score": 5
+      "score": 3
     },
     {
       "criterion": "Screenshots present (4)",
-      "score": 4
+      "score": 0
     },
     {
       "criterion": "Link to full board (1)",
-      "score": 0
+      "score": 1
     },
     {
       "criterion": "Table easy to read (5)",
@@ -50,15 +50,15 @@
     },
     {
       "criterion": "Summarizing critical points of interview (10)",
-      "score": 10
+      "score": 9
     },
     {
       "criterion": "Clear learning points (10)",
-      "score": 10
+      "score": 6
     },
     {
       "criterion": "Questions the team still has (10)",
-      "score": 10
+      "score": 7
     },
     {
       "criterion": "Outline of the next steps (10)",
@@ -66,9 +66,9 @@
     },
     {
       "criterion": "Recording is present (2)",
-      "score": 0
+      "score": 2
     }
   ],
-  "overall_score": "94.12%",
-  "overall_feedback": "The submission is well-organized and addresses most of the assessment criteria thoroughly, with clear interview insights and planned next steps. However, minor issues with grammar and the absence of a link to the full board and recording slightly detract from the overall quality."
+  "overall_score": "81.4%",
+  "overall_feedback": "The submission is well-structured and addresses the customer’s requirements with clear next steps and a solid outline of roles and functionalities. However, there are some issues with grammar, lack of screenshots, and the inclusiveness of a complete transcript and learning points could be improved."
 }
