@@ -1,0 +1,74 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure",
+      "score": 8
+    },
+    {
+      "criterion": "Grammar",
+      "score": 2
+    },
+    {
+      "criterion": "Roles",
+      "score": 5
+    },
+    {
+      "criterion": "Open and closed questions",
+      "score": 4
+    },
+    {
+      "criterion": "Questions structured",
+      "score": 4
+    },
+    {
+      "criterion": "Questions relevant",
+      "score": 5
+    },
+    {
+      "criterion": "General to specific questions",
+      "score": 4
+    },
+    {
+      "criterion": "Transcript",
+      "score": 5
+    },
+    {
+      "criterion": "Screenshots present",
+      "score": 4
+    },
+    {
+      "criterion": "Link to full board",
+      "score": 0
+    },
+    {
+      "criterion": "Table easy to read",
+      "score": 5
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants",
+      "score": 7
+    },
+    {
+      "criterion": "Summarizing critical points of interview",
+      "score": 9
+    },
+    {
+      "criterion": "Clear learning points",
+      "score": 9
+    },
+    {
+      "criterion": "Questions the team still has",
+      "score": 10
+    },
+    {
+      "criterion": "Outline of the next steps",
+      "score": 10
+    },
+    {
+      "criterion": "Recording is present",
+      "score": 0
+    }
+  ],
+  "overall_score": "86%",
+  "overall_feedback": "The submission is well-structured and covers most of the necessary aspects effectively. It demonstrates a clear understanding of the project requirements and outlines the next steps comprehensively. However, it lacks a link to the full board and a recording, which could have provided additional context."
+}
