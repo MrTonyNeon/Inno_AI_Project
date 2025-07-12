@@ -18,12 +18,16 @@ A tool for automatic anonymization of student PDF papers and their subsequent ev
 
 ## Installation
 
+1. Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/MrTonyNeon/Inno_AI_Project.git
 ```
+2. Navigate to the project directory
 ```bash
-# Install dependencies
+cd Inno_AI_Project
+```
+3. Install dependencies
+```bash
 pip install -r requirements.txt
 ```
 
