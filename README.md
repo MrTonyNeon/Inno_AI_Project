@@ -13,7 +13,7 @@ A tool for automatic anonymization of student PDF papers and their subsequent ev
 ## Requirements
 
 - Python 3.8+
-- PyPDF2
+- PyMuPDF
 - Other dependencies from `requirements.txt`
 
 ## Installation
