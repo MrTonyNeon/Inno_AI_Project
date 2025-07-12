@@ -48,10 +48,10 @@ python evaluate_ai.py --models gpt-4.1-nano
 ```
 
 ## Project Structure
-- anonymize_data.py - document anonymization script
-- evaluate_ai.py - work evaluation script
-- student_papers/ - source PDF files
 - anonymized_papers/ - anonymized versions
 - grades_results/ - work evaluation results
 - guideline_files/ - guidelines for evaluation
+- student_papers/ - source PDF files
+- anonymize_data.py - document anonymization script
+- evaluate_ai.py - work evaluation script
 - requirements.txt - project dependencies
