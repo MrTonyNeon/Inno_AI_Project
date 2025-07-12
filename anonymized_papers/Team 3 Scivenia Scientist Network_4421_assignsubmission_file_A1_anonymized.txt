@@ -1,0 +1,143 @@
+Team members, roles:
+PERSON_1 - backend (Skills: Rust+Rocket)
+PERSON_2 - teamlead + frontend (Skills: Java, C#, HTML, CSS and learning JavaScript
+now)
+PERSON_3 - frontend (Skills: HTML, CSS, React.js)
+PERSON_4 - backend of the searching algorithm (Skills: Java, C#)
+PERSON_5 - backend (Skills: C#, Python)
+PERSON_6 - backend (Skills: Rust, Python)
+Interview script:
+Can we use already implemented stuff from SciVenia.com?
+Can we show the data on separate sites and give hyperlinks to these sites in a graph (profiles in
+SciVenia) or should we give all the information in the graph itself?
+What do you mean by creating a metric for citations?
+Stack? (React.js, Rust+Rocket)
+The best way to communicate with the customer.
+Interview notes:
+Disclaimer: This is not a transcript but an outline of the main points, written as dialogue to make
+the questions and answers more readable.
+Presentation:
+SciVenia is a professional network for scientists. SciVenia already has the following functionality:
+you can create scientific events related to the science and open a scientist profile, which shows
+the main information about the scientist. Our project is the scientist network for SciVenia, which is
+an extension of the scientist profile. But our project will be separate from the site initially. In
+general, the goal is to visualize and demonstrate scientific collaboration. SciVenia doesn't have
+enough data, so we are going to use third-part APIs. Another goal is to implement searching for
+potential collaborators.
+Questions:
+-Can we use already implemented stuff from SciVenia.com?
+-You can, but I prefer this as an independent project. There is a possibility for us to share with
+you the graphql playground.
+-Can we show the data on separate sites and give hyperlinks to these sites in a graph (profiles in
+SciVenia) or should we give all the information in the graph itself?
+-This graph should be a kind of interactive graph. You can click, and you can see different
+connections. Click on those connections to open other connections. I can look at my professor; I
+see him. I can click on him and see all the people who have collaborated with him. If I see
+someone interesting to me, I can click on him and see all the connections. You need to use some
+visualization techniques. I want you guys to keep the communication going: "We have found
+these tools; we think they will work; we can talk about advantages, etc."
+-We have the last question about stacks. And one more thing: as you mentioned, the best way to
+communicate with you is via Telegram chat. So if we have a question, we can write you in this
+chat, and it will be OK, right?
+-Yes, this is going to be OK. And what is your last question?
+-The last question is to discuss the stack. We chose the technologies with which we already had
+experience. And we want to provide them.
+-The platform is PHP for the backend and React for the frontend. I think this is most convenient
+for the existing system, but I want to hear your suggestions before anything else. So I am
+listening for you; which stack did you guys choose?
+-We suggest Rust+Rocket for the backend and React.js for the frontend. And questions about
+databases. You suggest using the Graph OpenAIRE database, but we can also use anything we
+want, right?
+-For the database, you can explore some databases. Just try to do some research because Rust
+may need to connect to some SDKs.
+Skills and roles:
+PERSON_1 - backend (Rust+Rocket)
+PERSON_2 - teamlead + frontend (HTML, CSS and learning JavaScript now)
+PERSON_3 - frontend (HTML, CSS, React.js)
+PERSON_4 - backend searching algorithm (Java, C#)
+PERSON_5 - backend (C#, Python)
+PERSON_6 - backend (Rust, Python)
+More questions:
+-What do you mean by "create a metric for citations"?
+-Here I am interested to see a new metric. You can use Google Scholar and ResearchGate to
+see some metric examples.
+-Is there a priority for showing scientists, and if it exists, can it be changed by the user?
+-Yes, you should select an institution, and then at that institution you can have top scientists, or
+you can select them by their field (for example, computer science) Another way is to identify by
+locality. So there are many ideas, but I want to see what you propose.
+-Can we set a different "distance" between scientists? What I mean by "distance" - it's a number
+of graphs related to scientists.
+-For example, on Facebook, your distance from any person in the world is seven other people.
+So I would like you to identify the distance between you and other people. But you should give it
+as a graph. And it is important to identify how many papers we published together.
+-So we need some mathematical formula that will give us some collaboration rate, right?
+-That would be good. This sounds like a nice metric.
+-What would be a preferable time to communicate with you via telegram?
+-Actually, the next week I am busy, but I will try to answer you in one day. If you need a quick
+response, it's better to ask Daniel; if you need more information about the feature, I will try to
+answer in 24 hours. The best time is early in the morning, or from 6 p.m. to 9 p.m.
+Link to the recording
+Screenshots board:
+Facebook Graph Search:
+LinkedIn social graph visualization:
+Microsoft graph visualization technology:
+Qualitative analysis table:
+Name
+Information in
+every separate
+cell
+Ability to
+visualize big
+amount of cells
+Search
+convenience
+Visualize social
+graph as a
+graph
+Facebook
+Graph Search
+10
+8
+10
+0
+LinkedIn social
+graph
+visualization
+3
+10
+5
+8
+Microsoft graph
+visualization
+technology
+9
+9
+6
+10
+The 1-page report:
+From the interview, we understood that the customer wants a "professional network for
+scientists". It will be part of a bigger project. In that project, the creation of scientific events
+and scientists’ profiles already exists. The network should be an extension of the profile.
+Something similar exists on Facebook and LinkedIn. Also, we have to implement search by
+citation, collaboration, and maybe some other metrics in the future. We can get information
+about researchers from open databases or other aggregators.
+The study found that most social networks use the social graph to find profiles for
+recommendations, but very few of them visualize them exactly in the form of a graph. For
+example, such visualization is present on the professional social network LinkedIn, but it
+does not allow placing a large amount of information in each individual cell. The best
+functionality that allows users to create a graph that best corresponds to the description of
+the project comes from the presented technology from the company Microsoft. Their graph
+allows users to place a photo in a cell with a popup description. This model can be taken as
+the basis for our project, although it requires a number of modifications to meet the
+requirements of the customer.
+We have to discuss this with the customer:
+1.
+How exactly the product should look (design)
+2.
+The project’s stack
+3.
+Priority of features
+4.
+What we can do in time
+Our next step will be making some test applications. To synchronize our understanding of
+the product and the customer’s thoughts.

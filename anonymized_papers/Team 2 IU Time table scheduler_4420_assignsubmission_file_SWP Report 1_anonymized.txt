@@ -1,0 +1,120 @@
+SWP Report #1
+Role distribution
+Name
+Role
+PERSON_1
+Backend developer
+PERSON_2
+Backend developer
+PERSON_3
+Product manager
+PERSON_4
+Frontend developer
+PERSON_5
+Project manager
+Interview script:
+1. Please, explain in general terms the essence of the project.
+2. Should the schedule keep the same “one day - one subject”
+structure as it has now?
+3. Should the scheduler try to avoid putting the classes on
+Saturday, if it’s possible?
+4. Should the scheduler consider time for lunch?
+5. Should the scheduler try not to put the subjects in the early
+morning or in the late evening?
+Interview notes:
+The application (website) should take the data, which
+includes the subjects and their duration, the professors and
+their work time, the rooms and their capacity, the number
+of students etc., and generate a schedule, based on that
+data. Also the application should automatically post the
+generated schedule in the eduwiki.
+The structure “one day - one subject” is not mandatory, the
+only thing that is mandatory is the order of classes within
+the subject: lecture first, then tutorial, lab last. However, it
+should be checked, whether the students prefer the “one
+day - one subject” structure.
+Saturday is not considered as a day-off, however, previously
+people who were responsible for the schedule tried to avoid
+putting classes of the core courses on Saturday. But there is
+a problem with elective courses, since there are too many of
+them, so some of them are scheduled on Saturday.
+In the late evening students often aren’t ready to study
+properly, so it’s better to put the classes earlier, however
+the growing number of students might be the problem.
+Link to the interview recording:
+https://recorder.google.com/d9355ec1-d38a-4e81-93e8-
+d282a2fc6121
+Similar apps:
+1. “Составитель расписания”
+2. “Coast”
+3. “ofCourse”
+Сompetitor analysis
+app
+“Составитель
+расписания”
+“Coast”
+“ofCourse”
+pros
+
+Provides many of
+required features
+
+Simple interface
+
+Easy to export
+the schedule
+
+Good design
+
+Many details are
+taken into
+account
+cons
+
+Requires
+installation of the
+app
+
+Outdated design
+
+Complex interface
+
+Not fully automatic
+schedule
+generation
+
+Room capacity isn’t
+taken into account
+
+No automatic
+schedule
+generation
+
+Not free
+application
+
+Requires
+participation of
+the professors
+Report
+The customer needs to automate the process of schedule generation,
+which was previously done manually. Analysis showed that there is no
+application that fully satisfies the requirements of the customer. We
+may combine the best features of each app and also implement some
+features that none them has, for example, direct loading of the schedule
+on “eduwiki”. Several questions still need to be discussed:
+1. What’s the scale of the app? Should it be designed only for Innopolis
+University, or it should be able to generate schedule for any organization?
+2. How exactly should the input data be fed to the app?
+3. Where can we find the information about the number of rooms in the
+university and their capacity?
+4. Should the app have authorization via university account?
+5. Are there any preferences regarding the stack used in the
+development of the app?
+The most important part of the app is the schedule generation algorithm,
+and even though we have to satisfy the customer, the app’s result will
+affect other people - students and professors, therefore, we should
+conduct a survey of the audience in order to correct the algorithm.
+Our next steps would be to make the prototype of the app, let the
+customer test it and ask him about the flaws he finds to adjust the
+direction of the development.
