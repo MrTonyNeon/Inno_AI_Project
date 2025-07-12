@@ -42,7 +42,7 @@ python .\anonymize_data.py --max_files 1 --mode online_ai --model gpt-4o
 python evaluate_ai.py --models gpt-4.1-nano
 ```
 
-Project Structure
+## Project Structure
 - anonymize_data.py - document anonymization script
 - evaluate_ai.py - work evaluation script
 - student_papers/ - source PDF files
