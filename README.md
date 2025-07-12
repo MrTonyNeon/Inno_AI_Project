@@ -21,7 +21,8 @@ A tool for automatic anonymization of student PDF papers and their subsequent ev
 ```bash
 # Clone the repository
 git clone https://github.com/MrTonyNeon/Inno_AI_Project.git
-
+```
+```bash
 # Install dependencies
 pip install -r requirements.txt
 ```
