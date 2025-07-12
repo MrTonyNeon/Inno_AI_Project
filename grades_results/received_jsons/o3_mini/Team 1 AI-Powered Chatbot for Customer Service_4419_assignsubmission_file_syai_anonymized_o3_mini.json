@@ -2,11 +2,11 @@
   "criteria": [
     {
       "criterion": "Structure (10)",
-      "score": 9
+      "score": 10
     },
     {
       "criterion": "Grammar (2)",
-      "score": 1
+      "score": 2
     },
     {
       "criterion": "Roles (5)",
@@ -42,7 +42,7 @@
     },
     {
       "criterion": "Table easy to read (5)",
-      "score": 4
+      "score": 5
     },
     {
       "criterion": "Products and features are relevant to what customer wants (8)",
@@ -69,6 +69,6 @@
       "score": 0
     }
   ],
-  "overall_score": "94.12%",
-  "overall_feedback": "The submission is well-organized and addresses most of the assessment criteria thoroughly, with clear interview insights and planned next steps. However, minor issues with grammar and the absence of a link to the full board and recording slightly detract from the overall quality."
+  "overall_score": "97%",
+  "overall_feedback": "The submission is highly detailed and well-organized, clearly addressing most of the project requirements with excellent structure and clarity. Minor areas for improvement include providing a direct link to a full board and including any required recording."
 }

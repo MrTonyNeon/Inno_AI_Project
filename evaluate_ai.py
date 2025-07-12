@@ -2,6 +2,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import time
 import pandas as pd
 from dotenv import load_dotenv
@@ -44,6 +45,14 @@ def load_grading_template(csv_path):
 
 def get_submission_files(submissions_dir):
     return [f for f in os.listdir(submissions_dir) if f.endswith('.txt')]
+
+
+def extract_team_number(filename):
+    match = re.match(r'Team (\d+)', filename)
+    if match:
+        return int(match.group(1))
+    else:
+        return float('inf')
 
 
 def read_submission(file_path):
@@ -120,15 +129,22 @@ def save_llm_answer(answer_text, model_name, student_file, answers_dir):
 
 
 def parse_evaluation_to_row(evaluation_result, grading_template, student_file):
+    def extract_team_name(filename):
+        match = re.match(r'(Team \d+)', filename)
+        if match:
+            return match.group(1)
+        else:
+            return filename
+
     if evaluation_result is None:
-        row = {'Team Submission': student_file}
+        row = {'Team': student_file}
         for criterion in grading_template:
             row[f"{criterion}"] = "ERROR"
         row['Total'] = "ERROR"
         row['Feedback'] = "Evaluation failed"
         return row
 
-    row = {'Team Submission': student_file}
+    row = {'Team': extract_team_name(student_file)}
     for criterion_result in evaluation_result.get('criteria', []):
         criterion_name = criterion_result.get('criterion', '')
         matching_criteria = [c for c in grading_template if c.lower() in criterion_name.lower()
@@ -155,6 +171,7 @@ def main():
     grades_df = load_grading_template(args.grades_template)
     grading_criteria = [col for col in grades_df.columns if col != 'Team']
     submission_files = get_submission_files(args.submissions_dir)
+    submission_files.sort(key=extract_team_number)
 
     if args.models:
         models = []
@@ -177,7 +194,7 @@ def main():
         os.makedirs(model_answers_dir, exist_ok=True)
 
         output_file = os.path.join(args.output_dir, f"Grades_{model_name.replace('-', '_')}.csv")
-        columns = ['Team Submission'] + grading_criteria + ['Total'] + ['Feedback']
+        columns = ['Team'] + grading_criteria + ['Total'] + ['Feedback']
         results = []
 
         for student_file in submission_files:
