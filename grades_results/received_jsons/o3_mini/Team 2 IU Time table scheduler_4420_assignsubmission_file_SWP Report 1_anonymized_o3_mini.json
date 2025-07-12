@@ -1,74 +1,69 @@
 {
   "criteria": [
     {
-      "criterion": "Structure",
+      "criterion": "Structure (10)",
       "score": 8
     },
     {
-      "criterion": "Grammar",
+      "criterion": "Grammar (2)",
       "score": 2
     },
     {
-      "criterion": "Roles",
+      "criterion": "Roles (5)",
       "score": 5
     },
     {
-      "criterion": "Open and closed questions",
+      "criterion": "Open and closed questions (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Questions structured (5)",
       "score": 5
     },
     {
-      "criterion": "Questions structured",
+      "criterion": "Questions relevant (5)",
       "score": 5
     },
     {
-      "criterion": "Questions relevant",
+      "criterion": "General to specific questions (5)",
       "score": 5
     },
     {
-      "criterion": "General to specific questions",
-      "score": 5
+      "criterion": "Transcript (5)",
+      "score": 4
     },
     {
-      "criterion": "Transcript",
-      "score": 5
-    },
-    {
-      "criterion": "Screenshots present",
+      "criterion": "Screenshots present (4)",
       "score": 0
     },
     {
-      "criterion": "Link to full board",
-      "score": 1
+      "criterion": "Table easy to read (5)",
+      "score": 4
     },
     {
-      "criterion": "Table easy to read",
-      "score": 5
-    },
-    {
-      "criterion": "Products and features are relevant to what customer wants",
+      "criterion": "Products and features are relevant to what customer wants (8)",
       "score": 8
     },
     {
-      "criterion": "Summarizing critical points of interview",
+      "criterion": "Summarizing critical points of interview (10)",
       "score": 9
     },
     {
-      "criterion": "Clear learning points",
-      "score": 6
+      "criterion": "Clear learning points (10)",
+      "score": 8
     },
     {
-      "criterion": "Questions the team still has",
+      "criterion": "Questions the team still has (10)",
       "score": 10
     },
     {
-      "criterion": "Outline of the next steps",
+      "criterion": "Outline of the next steps (10)",
       "score": 10
     },
     {
-      "criterion": "Recording is present",
+      "criterion": "Recording is present (2)",
       "score": 2
     }
   ],
-  "overall_score": "89.22%",
-  "overall_feedback": "The submission is well-structured and demonstrates a clear understanding of the customer's requirements, with thorough competitor and interview analyses. However, the lack of screenshots and a more clearly articulated set of learning points slightly detract from the overall quality."
+  "overall_feedback": "The submission is well-organized and demonstrates a clear understanding of the project requirements with detailed roles, questions, and next steps. However, it misses some elements such as screenshots and a more explicit articulation of learning points."
 }

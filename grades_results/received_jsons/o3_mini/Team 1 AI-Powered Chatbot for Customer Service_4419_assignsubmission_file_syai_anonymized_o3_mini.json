@@ -1,74 +1,21 @@
 {
   "criteria": [
-    {
-      "criterion": "Structure (10)",
-      "score": 10
-    },
-    {
-      "criterion": "Grammar (2)",
-      "score": 2
-    },
-    {
-      "criterion": "Roles (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Open and closed questions (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Questions structured (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Questions relevant (5)",
-      "score": 5
-    },
-    {
-      "criterion": "General to specific questions (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Transcript (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Screenshots present (4)",
-      "score": 4
-    },
-    {
-      "criterion": "Link to full board (1)",
-      "score": 0
-    },
-    {
-      "criterion": "Table easy to read (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Products and features are relevant to what customer wants (8)",
-      "score": 8
-    },
-    {
-      "criterion": "Summarizing critical points of interview (10)",
-      "score": 10
-    },
-    {
-      "criterion": "Clear learning points (10)",
-      "score": 10
-    },
-    {
-      "criterion": "Questions the team still has (10)",
-      "score": 10
-    },
-    {
-      "criterion": "Outline of the next steps (10)",
-      "score": 10
-    },
-    {
-      "criterion": "Recording is present (2)",
-      "score": 0
-    }
+    { "criterion": "Structure", "score": 9 },
+    { "criterion": "Grammar", "score": 1 },
+    { "criterion": "Roles", "score": 5 },
+    { "criterion": "Open and closed questions", "score": 5 },
+    { "criterion": "Questions structured", "score": 5 },
+    { "criterion": "Questions relevant", "score": 5 },
+    { "criterion": "General to specific questions", "score": 5 },
+    { "criterion": "Transcript", "score": 5 },
+    { "criterion": "Screenshots present", "score": 4 },
+    { "criterion": "Table easy to read", "score": 4 },
+    { "criterion": "Products and features are relevant to what customer wants", "score": 8 },
+    { "criterion": "Summarizing critical points of interview", "score": 9 },
+    { "criterion": "Clear learning points", "score": 10 },
+    { "criterion": "Questions the team still has", "score": 10 },
+    { "criterion": "Outline of the next steps", "score": 10 },
+    { "criterion": "Recording is present", "score": 0 }
   ],
-  "overall_score": "97%",
-  "overall_feedback": "The submission is highly detailed and well-organized, clearly addressing most of the project requirements with excellent structure and clarity. Minor areas for improvement include providing a direct link to a full board and including any required recording."
+  "overall_feedback": "The submission is well-structured with a clear summary and actionable next steps, and it effectively covers the interview content. However, there are minor grammar issues and the absence of a recording lowers the overall score slightly."
 }

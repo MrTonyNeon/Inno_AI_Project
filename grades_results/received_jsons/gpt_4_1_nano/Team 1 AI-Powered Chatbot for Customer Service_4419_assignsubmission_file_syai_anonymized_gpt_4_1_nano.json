@@ -34,15 +34,11 @@
     },
     {
       "criterion": "Screenshots present (4)",
-      "score": 4
-    },
-    {
-      "criterion": "Link to full board (1)",
-      "score": 1
+      "score": 0
     },
     {
       "criterion": "Table easy to read (5)",
-      "score": 4
+      "score": 3
     },
     {
       "criterion": "Products and features are relevant to what customer wants (8)",
@@ -69,5 +65,5 @@
       "score": 0
     }
   ],
-  "overall_score": "73.4%",
-  "overall_feedback": "The submission demonstrates a solid understanding of the project scope, with clear role delineation and relevant questions. The structure is generally well-organized, though minor issues with grammar and presentation could be improved. The inclusion of detailed next steps and reflection on interview insights is commendable. However, the absence of a recording and some areas where questions could be more deeply structured or specific slightly detract from the overall quality. Overall, a competent submission with room for refinement."}
+  "overall_feedback": "The submission demonstrates a solid understanding of the project scope, with clear role definitions and thoughtful interview analysis. However, it lacks visual elements like screenshots and a recorded presentation, and there are some grammatical issues that slightly detract from its professionalism. Overall, it is a well-structured and relevant project report with room for improvement in presentation and language accuracy."
+}

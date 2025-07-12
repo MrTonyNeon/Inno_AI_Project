@@ -23,7 +23,6 @@ parser.add_argument("--models", nargs="+",
                     help="Models to use for evaluation (format: [provider:]model_name)")
 args = parser.parse_args()
 
-
 client = OpenAI(
     api_key=os.getenv("AITUNNEL_API_KEY"),
     base_url="https://api.aitunnel.ru/v1"
@@ -67,7 +66,7 @@ def create_evaluation_prompt(grading_criteria, submission_text):
 
         STUDENT SUBMISSION:
         {submission_text}
-        
+
         GRADING CRITERIA:
         {json.dumps(grading_criteria, indent=2)}
 
@@ -83,7 +82,6 @@ def create_evaluation_prompt(grading_criteria, submission_text):
             }},
             ...
           ],
-          "overall_score": "Sum of all assessed points divided by the maximum possible point, in percentages",
           "overall_feedback": "Brief overall assessment of the submission's strengths and weaknesses (1-3 sentences)"
         }}
         """
@@ -128,7 +126,30 @@ def save_llm_answer(answer_text, model_name, student_file, answers_dir):
     return filepath
 
 
-def parse_evaluation_to_row(evaluation_result, grading_template, student_file):
+def calculate_max_points(grading_template):
+    total_max_points = 0
+    for criterion in grading_template:
+        match = re.search(r'\((\d+)\)$', criterion)
+        if match:
+            total_max_points += int(match.group(1))
+    return total_max_points
+
+def calculate_total_score(row, total_max_points):
+    total_points = 0
+    for key, value in row.items():
+        if value not in ["", "ERROR"] and key != 'Team':
+            try:
+                total_points += float(value)
+            except (ValueError, TypeError):
+                pass
+
+    if total_max_points > 0:
+        return f"{(total_points / total_max_points) * 100:.2f}%"
+    else:
+        return "0%"
+
+
+def parse_evaluation_to_row(evaluation_result, grading_template, student_file, total_max_points):
     def extract_team_name(filename):
         match = re.match(r'(Team \d+)', filename)
         if match:
@@ -137,7 +158,7 @@ def parse_evaluation_to_row(evaluation_result, grading_template, student_file):
             return filename
 
     if evaluation_result is None:
-        row = {'Team': student_file}
+        row = {'Team': extract_team_name(student_file)}
         for criterion in grading_template:
             row[f"{criterion}"] = "ERROR"
         row['Total'] = "ERROR"
@@ -153,7 +174,7 @@ def parse_evaluation_to_row(evaluation_result, grading_template, student_file):
             criterion = matching_criteria[0]
             row[f"{criterion}"] = criterion_result.get('score', '')
 
-    row['Total'] = evaluation_result.get('overall_score', '')
+    row['Total'] = calculate_total_score(row, total_max_points)
     row['Feedback'] = evaluation_result.get('overall_feedback', '')
 
     for criterion in grading_template:
@@ -170,6 +191,8 @@ def main():
 
     grades_df = load_grading_template(args.grades_template)
     grading_criteria = [col for col in grades_df.columns if col != 'Team']
+    total_max_points = calculate_max_points(grading_criteria)
+
     submission_files = get_submission_files(args.submissions_dir)
     submission_files.sort(key=extract_team_number)
 
@@ -218,7 +241,7 @@ def main():
                 print(f"Error evaluating {student_file} with {model_name}: {e}")
                 evaluation_result, raw_response = None, None
 
-            row = parse_evaluation_to_row(evaluation_result, grading_criteria, student_file)
+            row = parse_evaluation_to_row(evaluation_result, grading_criteria, student_file, total_max_points)
             results.append(row)
 
         with open(output_file, 'w', newline='', encoding='utf-8') as f:
