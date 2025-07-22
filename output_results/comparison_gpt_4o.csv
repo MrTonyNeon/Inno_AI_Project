@@ -1,0 +1,151 @@
+Team,Criterion,Ref Score,Model Score,Similarity (%)
+Team 1,Structure (10),10.0,8.0,80.0
+Team 1,Grammar (2),2.0,1.0,50.0
+Team 1,Roles (5),5.0,5.0,100.0
+Team 1,Open and closed questions (5),5.0,4.0,80.0
+Team 1,Questions structured (5),5.0,4.0,80.0
+Team 1,Questions relevant (5),5.0,5.0,100.0
+Team 1,General to specific questions (5),5.0,4.0,80.0
+Team 1,Transcript (5),5.0,4.0,80.0
+Team 1,Table easy to read (5),4.0,4.0,100.0
+Team 1,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 1,Summarizing critical points of interview (10),10.0,9.0,90.0
+Team 1,Clear learning points (10),10.0,9.0,90.0
+Team 1,Questions the team still has (10),10.0,9.0,90.0
+Team 1,Outline of the next steps (10),10.0,9.0,90.0
+Team 1,Recording is present (2),0.0,0.0,100.0
+Team 2,Structure (10),8.0,8.0,100.0
+Team 2,Grammar (2),2.0,2.0,100.0
+Team 2,Roles (5),5.0,5.0,100.0
+Team 2,Open and closed questions (5),3.0,4.0,66.7
+Team 2,Questions structured (5),3.0,4.0,66.7
+Team 2,Questions relevant (5),3.0,5.0,33.3
+Team 2,General to specific questions (5),4.0,4.0,100.0
+Team 2,Transcript (5),5.0,3.0,60.0
+Team 2,Table easy to read (5),4.0,5.0,75.0
+Team 2,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 2,Summarizing critical points of interview (10),6.0,8.0,66.7
+Team 2,Clear learning points (10),8.0,9.0,87.5
+Team 2,Questions the team still has (10),10.0,9.0,90.0
+Team 2,Outline of the next steps (10),6.0,9.0,50.0
+Team 2,Recording is present (2),2.0,2.0,100.0
+Team 3,Structure (10),8.0,8.0,100.0
+Team 3,Grammar (2),2.0,2.0,100.0
+Team 3,Roles (5),5.0,5.0,100.0
+Team 3,Open and closed questions (5),4.0,4.0,100.0
+Team 3,Questions structured (5),3.0,4.0,66.7
+Team 3,Questions relevant (5),4.0,5.0,75.0
+Team 3,General to specific questions (5),3.0,4.0,66.7
+Team 3,Transcript (5),5.0,3.0,60.0
+Team 3,Table easy to read (5),4.0,5.0,75.0
+Team 3,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 3,Summarizing critical points of interview (10),10.0,9.0,90.0
+Team 3,Clear learning points (10),10.0,8.0,80.0
+Team 3,Questions the team still has (10),10.0,9.0,90.0
+Team 3,Outline of the next steps (10),6.0,9.0,50.0
+Team 3,Recording is present (2),2.0,2.0,100.0
+Team 4,Structure (10),9.0,8.0,88.9
+Team 4,Grammar (2),2.0,2.0,100.0
+Team 4,Roles (5),5.0,5.0,100.0
+Team 4,Open and closed questions (5),4.0,4.0,100.0
+Team 4,Questions structured (5),3.0,4.0,66.7
+Team 4,Questions relevant (5),4.0,5.0,75.0
+Team 4,General to specific questions (5),4.0,4.0,100.0
+Team 4,Transcript (5),5.0,5.0,100.0
+Team 4,Table easy to read (5),4.0,5.0,75.0
+Team 4,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 4,Summarizing critical points of interview (10),8.0,8.0,100.0
+Team 4,Clear learning points (10),8.0,8.0,100.0
+Team 4,Questions the team still has (10),5.0,7.0,60.0
+Team 4,Outline of the next steps (10),6.0,8.0,66.7
+Team 4,Recording is present (2),2.0,2.0,100.0
+Team 5,Structure (10),9.0,8.0,88.9
+Team 5,Grammar (2),2.0,2.0,100.0
+Team 5,Roles (5),5.0,5.0,100.0
+Team 5,Open and closed questions (5),5.0,4.0,80.0
+Team 5,Questions structured (5),5.0,4.0,80.0
+Team 5,Questions relevant (5),5.0,5.0,100.0
+Team 5,General to specific questions (5),5.0,4.0,80.0
+Team 5,Transcript (5),5.0,5.0,100.0
+Team 5,Table easy to read (5),5.0,4.0,80.0
+Team 5,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 5,Summarizing critical points of interview (10),10.0,9.0,90.0
+Team 5,Clear learning points (10),10.0,9.0,90.0
+Team 5,Questions the team still has (10),4.0,8.0,0.0
+Team 5,Outline of the next steps (10),10.0,9.0,90.0
+Team 5,Recording is present (2),2.0,2.0,100.0
+Team 6,Structure (10),9.0,8.0,88.9
+Team 6,Grammar (2),2.0,2.0,100.0
+Team 6,Roles (5),5.0,5.0,100.0
+Team 6,Open and closed questions (5),5.0,4.0,80.0
+Team 6,Questions structured (5),4.0,4.0,100.0
+Team 6,Questions relevant (5),5.0,5.0,100.0
+Team 6,General to specific questions (5),5.0,4.0,80.0
+Team 6,Transcript (5),5.0,5.0,100.0
+Team 6,Table easy to read (5),5.0,4.0,80.0
+Team 6,Products and features are relevant to what customer wants (8),6.0,8.0,66.7
+Team 6,Summarizing critical points of interview (10),10.0,9.0,90.0
+Team 6,Clear learning points (10),10.0,9.0,90.0
+Team 6,Questions the team still has (10),4.0,8.0,0.0
+Team 6,Outline of the next steps (10),6.0,9.0,50.0
+Team 6,Recording is present (2),0.0,2.0,100.0
+Team 7,Structure (10),10.0,8.0,80.0
+Team 7,Grammar (2),2.0,2.0,100.0
+Team 7,Roles (5),5.0,5.0,100.0
+Team 7,Open and closed questions (5),5.0,5.0,100.0
+Team 7,Questions structured (5),4.0,4.0,100.0
+Team 7,Questions relevant (5),4.0,5.0,75.0
+Team 7,General to specific questions (5),5.0,4.0,80.0
+Team 7,Transcript (5),5.0,4.0,80.0
+Team 7,Table easy to read (5),5.0,3.0,60.0
+Team 7,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 7,Summarizing critical points of interview (10),10.0,8.0,80.0
+Team 7,Clear learning points (10),10.0,8.0,80.0
+Team 7,Questions the team still has (10),8.0,9.0,87.5
+Team 7,Outline of the next steps (10),8.0,9.0,87.5
+Team 7,Recording is present (2),2.0,2.0,100.0
+Team 8,Structure (10),9.0,8.0,88.9
+Team 8,Grammar (2),2.0,2.0,100.0
+Team 8,Roles (5),5.0,5.0,100.0
+Team 8,Open and closed questions (5),5.0,4.0,80.0
+Team 8,Questions structured (5),5.0,4.0,80.0
+Team 8,Questions relevant (5),4.0,5.0,75.0
+Team 8,General to specific questions (5),5.0,4.0,80.0
+Team 8,Transcript (5),4.0,3.0,75.0
+Team 8,Table easy to read (5),5.0,4.0,80.0
+Team 8,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 8,Summarizing critical points of interview (10),10.0,8.0,80.0
+Team 8,Clear learning points (10),10.0,9.0,90.0
+Team 8,Questions the team still has (10),10.0,9.0,90.0
+Team 8,Outline of the next steps (10),10.0,9.0,90.0
+Team 8,Recording is present (2),0.0,0.0,100.0
+Team 9,Structure (10),10.0,8.0,80.0
+Team 9,Grammar (2),2.0,2.0,100.0
+Team 9,Roles (5),5.0,5.0,100.0
+Team 9,Open and closed questions (5),5.0,5.0,100.0
+Team 9,Questions structured (5),5.0,4.0,80.0
+Team 9,Questions relevant (5),5.0,5.0,100.0
+Team 9,General to specific questions (5),5.0,4.0,80.0
+Team 9,Transcript (5),5.0,3.0,60.0
+Team 9,Table easy to read (5),5.0,4.0,80.0
+Team 9,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 9,Summarizing critical points of interview (10),10.0,8.0,80.0
+Team 9,Clear learning points (10),10.0,9.0,90.0
+Team 9,Questions the team still has (10),10.0,8.0,80.0
+Team 9,Outline of the next steps (10),8.0,9.0,87.5
+Team 9,Recording is present (2),2.0,2.0,100.0
+Team 10,Structure (10),9.0,8.0,88.9
+Team 10,Grammar (2),2.0,2.0,100.0
+Team 10,Roles (5),5.0,5.0,100.0
+Team 10,Open and closed questions (5),5.0,4.0,80.0
+Team 10,Questions structured (5),5.0,4.0,80.0
+Team 10,Questions relevant (5),4.0,5.0,75.0
+Team 10,General to specific questions (5),4.0,4.0,100.0
+Team 10,Transcript (5),5.0,5.0,100.0
+Team 10,Table easy to read (5),4.0,4.0,100.0
+Team 10,Products and features are relevant to what customer wants (8),8.0,7.0,87.5
+Team 10,Summarizing critical points of interview (10),10.0,8.0,80.0
+Team 10,Clear learning points (10),10.0,9.0,90.0
+Team 10,Questions the team still has (10),10.0,9.0,90.0
+Team 10,Outline of the next steps (10),10.0,9.0,90.0
+Team 10,Recording is present (2),0.0,0.0,100.0

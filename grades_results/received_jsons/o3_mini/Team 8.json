@@ -2,11 +2,11 @@
   "criteria": [
     {
       "criterion": "Structure (10)",
-      "score": 8
+      "score": 9
     },
     {
       "criterion": "Grammar (2)",
-      "score": 1
+      "score": 2
     },
     {
       "criterion": "Roles (5)",
@@ -14,11 +14,11 @@
     },
     {
       "criterion": "Open and closed questions (5)",
-      "score": 4
+      "score": 5
     },
     {
       "criterion": "Questions structured (5)",
-      "score": 4
+      "score": 5
     },
     {
       "criterion": "Questions relevant (5)",
@@ -26,44 +26,40 @@
     },
     {
       "criterion": "General to specific questions (5)",
-      "score": 4
+      "score": 5
     },
     {
       "criterion": "Transcript (5)",
-      "score": 4
-    },
-    {
-      "criterion": "Screenshots present (4)",
-      "score": 0
+      "score": 5
     },
     {
       "criterion": "Table easy to read (5)",
-      "score": 3
+      "score": 4
     },
     {
       "criterion": "Products and features are relevant to what customer wants (8)",
-      "score": 6
+      "score": 8
     },
     {
       "criterion": "Summarizing critical points of interview (10)",
-      "score": 8
+      "score": 10
     },
     {
       "criterion": "Clear learning points (10)",
-      "score": 8
+      "score": 9
     },
     {
       "criterion": "Questions the team still has (10)",
-      "score": 9
+      "score": 10
     },
     {
       "criterion": "Outline of the next steps (10)",
-      "score": 9
+      "score": 10
     },
     {
       "criterion": "Recording is present (2)",
-      "score": 0
+      "score": 2
     }
   ],
-  "overall_feedback": "The submission demonstrates a solid understanding of the project scope, with clear role definitions and thoughtful interview analysis. However, it lacks visual elements like screenshots and a recorded presentation, and there are some grammatical issues that slightly detract from its professionalism. Overall, it is a well-structured and relevant project report with room for improvement in presentation and language accuracy."
+  "overall_feedback": "The submission is comprehensive and well-detailed, effectively outlining project requirements, interview insights, and next steps. Minor improvements in table clarity and some formatting could further enhance the presentation."
 }

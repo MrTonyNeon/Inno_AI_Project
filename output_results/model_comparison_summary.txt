@@ -1,0 +1,10 @@
+Model Accuracy Summary
+=======================
+o3_mini: 86.22% accuracy
+gpt_4o: 85.29% accuracy
+gpt_4.1_nano: 74.85% accuracy
+
+Model Ranking (Most to Least Accurate):
+1. o3_mini
+2. gpt_4o
+3. gpt_4.1_nano

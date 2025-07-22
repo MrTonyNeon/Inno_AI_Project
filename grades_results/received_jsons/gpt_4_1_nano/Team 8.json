@@ -2,7 +2,7 @@
   "criteria": [
     {
       "criterion": "Structure (10)",
-      "score": 8
+      "score": 7
     },
     {
       "criterion": "Grammar (2)",
@@ -10,7 +10,7 @@
     },
     {
       "criterion": "Roles (5)",
-      "score": 5
+      "score": 4
     },
     {
       "criterion": "Open and closed questions (5)",
@@ -18,27 +18,19 @@
     },
     {
       "criterion": "Questions structured (5)",
-      "score": 5
+      "score": 4
     },
     {
       "criterion": "Questions relevant (5)",
-      "score": 5
+      "score": 4
     },
     {
       "criterion": "General to specific questions (5)",
-      "score": 5
-    },
-    {
-      "criterion": "Transcript (5)",
       "score": 3
     },
     {
-      "criterion": "Screenshots present (4)",
-      "score": 0
-    },
-    {
-      "criterion": "Link to full board (1)",
-      "score": 1
+      "criterion": "Transcript (5)",
+      "score": 4
     },
     {
       "criterion": "Table easy to read (5)",
@@ -46,29 +38,28 @@
     },
     {
       "criterion": "Products and features are relevant to what customer wants (8)",
-      "score": 8
-    },
-    {
-      "criterion": "Summarizing critical points of interview (10)",
-      "score": 9
-    },
-    {
-      "criterion": "Clear learning points (10)",
       "score": 6
     },
     {
-      "criterion": "Questions the team still has (10)",
+      "criterion": "Summarizing critical points of interview (10)",
       "score": 7
     },
     {
+      "criterion": "Clear learning points (10)",
+      "score": 7
+    },
+    {
+      "criterion": "Questions the team still has (10)",
+      "score": 8
+    },
+    {
       "criterion": "Outline of the next steps (10)",
-      "score": 10
+      "score": 8
     },
     {
       "criterion": "Recording is present (2)",
       "score": 2
     }
   ],
-  "overall_score": "81.4%",
-  "overall_feedback": "The submission is well-structured and addresses the customer’s requirements with clear next steps and a solid outline of roles and functionalities. However, there are some issues with grammar, lack of screenshots, and the inclusiveness of a complete transcript and learning points could be improved."
+  "overall_feedback": "The submission demonstrates a solid understanding of the project scope and includes relevant questions and analysis, but it could benefit from improved clarity, better organization, and more polished language to enhance professionalism and readability."
 }

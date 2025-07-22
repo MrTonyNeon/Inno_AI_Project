@@ -2,15 +2,15 @@
   "criteria": [
     {
       "criterion": "Structure (10)",
-      "score": 7
+      "score": 8
     },
     {
       "criterion": "Grammar (2)",
-      "score": 1
+      "score": 2
     },
     {
       "criterion": "Roles (5)",
-      "score": 4
+      "score": 5
     },
     {
       "criterion": "Open and closed questions (5)",
@@ -30,40 +30,36 @@
     },
     {
       "criterion": "Transcript (5)",
-      "score": 4
-    },
-    {
-      "criterion": "Screenshots present (4)",
-      "score": 0
+      "score": 5
     },
     {
       "criterion": "Table easy to read (5)",
-      "score": 3
+      "score": 4
     },
     {
       "criterion": "Products and features are relevant to what customer wants (8)",
-      "score": 6
-    },
-    {
-      "criterion": "Summarizing critical points of interview (10)",
       "score": 7
     },
     {
+      "criterion": "Summarizing critical points of interview (10)",
+      "score": 8
+    },
+    {
       "criterion": "Clear learning points (10)",
-      "score": 6
+      "score": 8
     },
     {
       "criterion": "Questions the team still has (10)",
-      "score": 8
+      "score": 9
     },
     {
       "criterion": "Outline of the next steps (10)",
-      "score": 8
+      "score": 9
     },
     {
       "criterion": "Recording is present (2)",
       "score": 2
     }
   ],
-  "overall_feedback": "The submission provides a comprehensive overview of the project, including detailed interview notes and research analysis. However, it lacks visual elements like screenshots, and there are some grammatical issues. Overall, it demonstrates good understanding and organization but could benefit from clearer formatting and presentation enhancements."
+  "overall_feedback": "The submission demonstrates thoroughness in interview analysis and clear organization, though some areas such as question structuring and presentation could be improved for clarity and conciseness."
 }

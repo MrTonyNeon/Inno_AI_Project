@@ -1,0 +1,65 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure (10)",
+      "score": 6
+    },
+    {
+      "criterion": "Grammar (2)",
+      "score": 1
+    },
+    {
+      "criterion": "Roles (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Open and closed questions (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Questions structured (5)",
+      "score": 3
+    },
+    {
+      "criterion": "Questions relevant (5)",
+      "score": 4
+    },
+    {
+      "criterion": "General to specific questions (5)",
+      "score": 3
+    },
+    {
+      "criterion": "Transcript (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Table easy to read (5)",
+      "score": 3
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants (8)",
+      "score": 5
+    },
+    {
+      "criterion": "Summarizing critical points of interview (10)",
+      "score": 7
+    },
+    {
+      "criterion": "Clear learning points (10)",
+      "score": 6
+    },
+    {
+      "criterion": "Questions the team still has (10)",
+      "score": 7
+    },
+    {
+      "criterion": "Outline of the next steps (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Recording is present (2)",
+      "score": 0
+    }
+  ],
+  "overall_feedback": "The submission demonstrates a good understanding of the project scope and includes relevant questions and next steps, but it lacks clarity in structure, grammar, and presentation, and does not include an actual recording as required."
+}

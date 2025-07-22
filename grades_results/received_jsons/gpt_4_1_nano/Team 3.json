@@ -2,11 +2,11 @@
   "criteria": [
     {
       "criterion": "Structure (10)",
-      "score": 7
+      "score": 8
     },
     {
       "criterion": "Grammar (2)",
-      "score": 1
+      "score": 2
     },
     {
       "criterion": "Roles (5)",
@@ -30,11 +30,7 @@
     },
     {
       "criterion": "Transcript (5)",
-      "score": 4
-    },
-    {
-      "criterion": "Screenshots present (4)",
-      "score": 0
+      "score": 3
     },
     {
       "criterion": "Table easy to read (5)",
@@ -46,11 +42,11 @@
     },
     {
       "criterion": "Summarizing critical points of interview (10)",
-      "score": 7
+      "score": 8
     },
     {
       "criterion": "Clear learning points (10)",
-      "score": 6
+      "score": 8
     },
     {
       "criterion": "Questions the team still has (10)",
@@ -65,5 +61,5 @@
       "score": 2
     }
   ],
-  "overall_feedback": "The submission demonstrates a good understanding of interview structure and relevant questions, with clear role distribution and next steps outlined. However, it lacks visual elements like screenshots, and the report could benefit from improved grammar and formatting for clarity and professionalism."
+  "overall_feedback": "The submission demonstrates a solid understanding of the interview content with well-structured questions and relevant focus, though it could benefit from clearer transcript presentation and more explicit next steps. Overall, it effectively captures key points and team roles." 
 }
