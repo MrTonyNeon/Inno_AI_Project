@@ -8,30 +8,37 @@ import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Load environment variables (for API keys)
-load_dotenv()
+DEFAULT_SUBMISSIONS_DIR = "anonymized_papers"
+DEFAULT_GRADES_TEMPLATE = "guideline_files/Grades.csv"
+DEFAULT_OUTPUT_DIR = "grades_results"
+DEFAULT_MAX_FILES = 5
 
-# Set up command line arguments
 parser = argparse.ArgumentParser(description="Evaluate student submissions using AI models")
-parser.add_argument("--submissions-dir", default="anonymized_papers",
-                    help="Directory containing student submission files")
-parser.add_argument("--grades-template", default="guideline_files/Grades.csv",
-                    help="Path to grading template CSV")
-parser.add_argument("--output-dir", default="grades_results",
-                    help="Directory to save evaluation results")
-parser.add_argument("--models", nargs="+",
-                    help="Models to use for evaluation (format: [provider:]model_name)")
+parser.add_argument("--models", nargs="+", help="Models to use for evaluation (format: [provider:]model_name)")
+parser.add_argument("--max-files", type=int, default=DEFAULT_MAX_FILES,
+                    help="Maximum number of new files to evaluate (already evaluated ones are skipped)")
 args = parser.parse_args()
 
-client = OpenAI(
-    api_key=os.getenv("AITUNNEL_API_KEY"),
-    base_url="https://api.aitunnel.ru/v1"
-)
+load_dotenv(override=True)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+AITUNNEL_API_KEY = os.getenv("AITUNNEL_API_KEY")
 
-# Define the models to evaluate
-DEFAULT_MODELS = [
-    {"name": "gpt-4.1-nano", "provider": "aitunnel"},
-]
+print(f"OPENAI_API_KEY: {'✅ Found' if OPENAI_API_KEY else '❌ Not found'}")
+print(f"OPENROUTER_API_KEY: {'✅ Found' if OPENROUTER_API_KEY else '❌ Not found'}")
+print(f"AITUNNEL_API_KEY: {'✅ Found' if AITUNNEL_API_KEY else '❌ Not found'}")
+
+if OPENAI_API_KEY:
+    client = OpenAI(api_key=OPENAI_API_KEY)
+    DEFAULT_MODELS = [{"name": "gpt-4o-mini", "provider": "openai"}]
+elif OPENROUTER_API_KEY:
+    client = OpenAI(api_key=OPENROUTER_API_KEY, base_url="https://openrouter.ai/api/v1")
+    DEFAULT_MODELS = [{"name": "deepseek/deepseek-chat-v3-0324:free", "provider": "openrouter"}]
+elif AITUNNEL_API_KEY:
+    client = OpenAI(api_key=AITUNNEL_API_KEY, base_url="https://api.aitunnel.ru/v1")
+    DEFAULT_MODELS = [{"name": "gpt-4.1-nano", "provider": "aitunnel"}]
+else:
+    raise ValueError("No valid API key found.")
 
 
 def load_grading_template(csv_path):
@@ -70,8 +77,10 @@ def create_evaluation_prompt(grading_criteria, submission_text):
     {json.dumps(grading_criteria, indent=2)}
 
     Your task is to evaluate this submission according to the provided criteria. For each criterion:
-    - Provide a score within the specified range, no explanation is needed.
-    - Criterion name must match exactly with the grading criteria name.
+    - Use the maximum score indicated in brackets as the upper bound (e.g., "Structure (10)" means a maximum score of 10).
+    - Provide a score between 0 and the maximum value clearly stated in brackets.
+    - Criterion names must match the grading criteria exactly as given, including any brackets.
+    - Do not provide any explanation, just the JSON structure requested.
 
     Please return your evaluation strictly in the following JSON format:
     {{
@@ -230,21 +239,21 @@ def parse_evaluation_to_row(evaluation_result, grading_template, student_file, t
 
 
 def main():
-    os.makedirs(args.output_dir, exist_ok=True)
-    answers_dir = os.path.join(args.output_dir, "received_jsons")
+    os.makedirs(DEFAULT_OUTPUT_DIR, exist_ok=True)
+    answers_dir = os.path.join(DEFAULT_OUTPUT_DIR, "received_jsons")
     os.makedirs(answers_dir, exist_ok=True)
 
-    grades_df = load_grading_template(args.grades_template)
+    grades_df = load_grading_template(DEFAULT_GRADES_TEMPLATE)
     grading_criteria = [col for col in grades_df.columns if col != 'Team']
     total_max_points = calculate_max_points(grading_criteria)
 
-    submission_files = get_submission_files(args.submissions_dir)
+    submission_files = get_submission_files(DEFAULT_SUBMISSIONS_DIR)
     submission_files.sort(key=extract_team_number)
 
     if args.models:
         models = []
         for model_spec in args.models:
-            parts = model_spec.split(":")
+            parts = model_spec.split(":", 1)
             if len(parts) == 2:
                 models.append({"name": parts[1], "provider": parts[0]})
             else:
@@ -257,12 +266,14 @@ def main():
         provider = model["provider"]
         print(f"Evaluating submissions with {provider}:{model_name}...")
 
-        model_answers_dir = os.path.join(answers_dir, model_name.replace('-', '_').replace('.', '_'))
+        model_answers_dir = os.path.join(answers_dir, model_name.replace('-', '_').replace('.', '_')).replace(':', '_')
         os.makedirs(model_answers_dir, exist_ok=True)
 
-        output_file = os.path.join(args.output_dir, f"Grades_{model_name.replace('-', '_')}.csv")
+        sanitized_model_name = model_name.replace('-', '_').replace('/', '_').replace(':', '_')
+        output_file = os.path.join(DEFAULT_OUTPUT_DIR, f"Grades_{sanitized_model_name}.csv")
         columns = ['Team'] + grading_criteria + ['Total'] + ['Feedback']
         results = []
+        evaluated_count = 0
 
         already_evaluated = {}
         for json_file in os.listdir(model_answers_dir):
@@ -300,17 +311,21 @@ def main():
             else:
                 print(f"    Team {team_number} not yet evaluated.")
 
-            if evaluation_result is None:
-                submission_path = os.path.join(args.submissions_dir, student_file)
+                if evaluated_count >= args.max_files:
+                    print(f"    Max new evaluations reached ({args.max_files}), skipping...")
+                    continue
+
+                submission_path = os.path.join(DEFAULT_SUBMISSIONS_DIR, student_file)
                 submission_text = read_submission(submission_path)
                 prompt = create_evaluation_prompt(grading_criteria, submission_text)
 
                 try:
-                    if provider in ["aitunnel", "openai"]:
+                    if provider in ["aitunnel", "openai", "openrouter"]:
                         evaluation_result, raw_response = evaluate_with_llm(client, model_name, prompt, grading_criteria)
                         if raw_response:
                             save_path = save_llm_answer(raw_response, student_file, model_answers_dir)
                             print(f"    Saved response to {save_path}")
+                            evaluated_count += 1
                     else:
                         print(f"Provider '{provider}' not supported yet")
                         evaluation_result, raw_response = None, None

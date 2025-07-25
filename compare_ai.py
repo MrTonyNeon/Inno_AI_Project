@@ -15,7 +15,10 @@ os.makedirs(PLOT_DIR, exist_ok=True)
 
 def preprocess_dataframe(df):
     df = df.drop(columns=["Feedback"], errors='ignore')
-    df["Total"] = df["Total"].str.rstrip('%').astype(float)
+    df = df[~df.apply(lambda row: row.astype(str).str.contains("ERROR", na=False)).any(axis=1)]
+    df["Total"] = df["Total"].str.rstrip('%')
+    df["Total"] = pd.to_numeric(df["Total"], errors='coerce')
+    df = df.dropna(subset=["Total"])
     df.set_index(df.columns[0], inplace=True)
     return df
 

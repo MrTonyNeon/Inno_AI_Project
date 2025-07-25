@@ -2,9 +2,15 @@ Model Accuracy Summary
 =======================
 o3_mini: 86.22% accuracy
 gpt_4o: 85.29% accuracy
+deepseek_deepseek_chat_v3_0324: 82.73% accuracy
+deepseek_r1: 82.53% accuracy
+deepseek_chat: 80.29% accuracy
 gpt_4.1_nano: 74.85% accuracy
 
 Model Ranking (Most to Least Accurate):
 1. o3_mini
 2. gpt_4o
-3. gpt_4.1_nano
+3. deepseek_deepseek_chat_v3_0324
+4. deepseek_r1
+5. deepseek_chat
+6. gpt_4.1_nano
