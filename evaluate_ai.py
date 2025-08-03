@@ -11,6 +11,7 @@ from openai import OpenAI
 DEFAULT_SUBMISSIONS_DIR = "anonymized_papers"
 DEFAULT_GRADES_TEMPLATE = "guideline_files/Grades.csv"
 DEFAULT_OUTPUT_DIR = "grades_results"
+DEFAULT_PROVIDERS_LIST = ["openai", "openrouter", "aitunnel"]
 DEFAULT_MAX_FILES = 5
 
 parser = argparse.ArgumentParser(description="Evaluate student submissions using AI models")
@@ -320,7 +321,7 @@ def main():
                 prompt = create_evaluation_prompt(grading_criteria, submission_text)
 
                 try:
-                    if provider in ["aitunnel", "openai", "openrouter"]:
+                    if provider in DEFAULT_PROVIDERS_LIST:
                         evaluation_result, raw_response = evaluate_with_llm(client, model_name, prompt, grading_criteria)
                         if raw_response:
                             save_path = save_llm_answer(raw_response, student_file, model_answers_dir)

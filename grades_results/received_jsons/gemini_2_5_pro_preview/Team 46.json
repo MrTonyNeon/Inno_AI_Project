@@ -1,0 +1,65 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure (10)",
+      "score": 9
+    },
+    {
+      "criterion": "Grammar (2)",
+      "score": 1
+    },
+    {
+      "criterion": "Roles (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Open and closed questions (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Questions structured (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Questions relevant (5)",
+      "score": 5
+    },
+    {
+      "criterion": "General to specific questions (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Transcript (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Table easy to read (5)",
+      "score": 1
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants (8)",
+      "score": 5
+    },
+    {
+      "criterion": "Summarizing critical points of interview (10)",
+      "score": 9
+    },
+    {
+      "criterion": "Clear learning points (10)",
+      "score": 9
+    },
+    {
+      "criterion": "Questions the team still has (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Outline of the next steps (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Recording is present (2)",
+      "score": 2
+    }
+  ],
+  "overall_feedback": "The submission demonstrates a strong understanding of the project requirements through a well-structured interview and report, but is weak in its competitive analysis and presentation of tabular data."
+}

@@ -1,0 +1,65 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Grammar (2)",
+      "score": 1
+    },
+    {
+      "criterion": "Roles (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Open and closed questions (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Questions structured (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Questions relevant (5)",
+      "score": 5
+    },
+    {
+      "criterion": "General to specific questions (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Transcript (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Table easy to read (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants (8)",
+      "score": 7
+    },
+    {
+      "criterion": "Summarizing critical points of interview (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Clear learning points (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Questions the team still has (10)",
+      "score": 9
+    },
+    {
+      "criterion": "Outline of the next steps (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Recording is present (2)",
+      "score": 0
+    }
+  ],
+  "overall_feedback": "The submission provides a well-structured report with clear next steps and good identification of team roles. However, there are some grammatical issues and the interview transcript could be more detailed."
+}

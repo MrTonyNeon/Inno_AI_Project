@@ -1,16 +1,36 @@
 Model Accuracy Summary
 =======================
-o3_mini: 86.22% accuracy
-gpt_4o: 85.29% accuracy
-deepseek_deepseek_chat_v3_0324: 82.73% accuracy
-deepseek_r1: 82.53% accuracy
-deepseek_chat: 80.29% accuracy
-gpt_4.1_nano: 74.85% accuracy
+gpt_3.5_turbo: 87.51% accuracy
+o3_mini: 86.88% accuracy
+deepseek_chat_v3: 86.59% accuracy
+llama_4_maverick: 86.18% accuracy
+gpt_4.1: 85.39% accuracy
+claude_3.5_sonnet: 85.31% accuracy
+deepseek_chat: 85.25% accuracy
+gpt_4o: 85.15% accuracy
+llama_3.3_70b_instruct: 84.89% accuracy
+gemini_2.5_flash: 84.88% accuracy
+gemini_2.5_pro_preview: 84.04% accuracy
+deepseek_r1: 84.00% accuracy
+gpt_4_turbo: 82.23% accuracy
+gpt_4o_mini: 81.57% accuracy
+gpt_4.1_nano: 77.68% accuracy
+o3: 70.76% accuracy
 
 Model Ranking (Most to Least Accurate):
-1. o3_mini
-2. gpt_4o
-3. deepseek_deepseek_chat_v3_0324
-4. deepseek_r1
-5. deepseek_chat
-6. gpt_4.1_nano
+1. gpt_3.5_turbo
+2. o3_mini
+3. deepseek_chat_v3
+4. llama_4_maverick
+5. gpt_4.1
+6. claude_3.5_sonnet
+7. deepseek_chat
+8. gpt_4o
+9. llama_3.3_70b_instruct
+10. gemini_2.5_flash
+11. gemini_2.5_pro_preview
+12. deepseek_r1
+13. gpt_4_turbo
+14. gpt_4o_mini
+15. gpt_4.1_nano
+16. o3

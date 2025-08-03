@@ -1,4 +1,5 @@
 import os
+import re
 import pandas as pd
 from tqdm import tqdm
 import matplotlib.pyplot as plt
@@ -22,7 +23,12 @@ def preprocess_dataframe(df):
     df.set_index(df.columns[0], inplace=True)
     return df
 
+def extract_max_score(column_name):
+    match = re.search(r"\((\d+)\)$", column_name.strip())
+    return int(match.group(1)) if match else None
+
 guideline_df = preprocess_dataframe(pd.read_csv(GUIDELINE_FILE))
+MAX_SCORES = {col: extract_max_score(col) for col in guideline_df.columns if col != "Total" and extract_max_score(col) is not None}
 
 model_accuracies = {}
 model_files = [f for f in os.listdir(MODEL_DIR) if f.endswith(".csv")]
@@ -48,9 +54,9 @@ for model_file in tqdm(model_files, desc="Comparing Models", unit="model"):
             try:
                 ref_val = float(ref_score)
                 model_val = float(model_score)
-                abs_diff = abs(model_val - ref_val)
-                pct_error = round(abs_diff / ref_val * 100, 1) if ref_val != 0 else 0
-                similarity = 100 - pct_error
+                abs_diff = abs(ref_val - model_val)
+                max_score = MAX_SCORES[col]
+                similarity = 100 - (abs_diff / max_score) * 100
             except ValueError:
                 ref_val = None
                 model_val = None
@@ -129,7 +135,7 @@ plt.figure(figsize=(8, 5))
 sns.barplot(x=[m for m, _ in sorted_models], y=[a for _, a in sorted_models], hue=[m for m, _ in sorted_models], legend=False)
 plt.ylabel("Average Similarity (%)")
 plt.title("Model Accuracy Comparison")
-plt.xticks(rotation=45)
+plt.xticks(rotation=60, ha='center')
 plt.tight_layout()
 plt.savefig(os.path.join(PLOT_DIR, "model_accuracy_comparison.png"))
 plt.close()

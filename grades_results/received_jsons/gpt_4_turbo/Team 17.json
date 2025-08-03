@@ -1,0 +1,65 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Grammar (2)",
+      "score": 2
+    },
+    {
+      "criterion": "Roles (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Open and closed questions (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Questions structured (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Questions relevant (5)",
+      "score": 5
+    },
+    {
+      "criterion": "General to specific questions (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Transcript (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Table easy to read (5)",
+      "score": 4
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants (8)",
+      "score": 7
+    },
+    {
+      "criterion": "Summarizing critical points of interview (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Clear learning points (10)",
+      "score": 7
+    },
+    {
+      "criterion": "Questions the team still has (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Outline of the next steps (10)",
+      "score": 8
+    },
+    {
+      "criterion": "Recording is present (2)",
+      "score": 2
+    }
+  ],
+  "overall_feedback": "The submission is well-structured and comprehensive, effectively addressing most of the project requirements. However, there is room for improvement in the clarity and organization of the interview transcript and the qualitative analysis table."
+}

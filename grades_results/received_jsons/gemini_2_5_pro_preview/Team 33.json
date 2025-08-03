@@ -1,0 +1,65 @@
+{
+  "criteria": [
+    {
+      "criterion": "Structure (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Grammar (2)",
+      "score": 1
+    },
+    {
+      "criterion": "Roles (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Open and closed questions (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Questions structured (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Questions relevant (5)",
+      "score": 5
+    },
+    {
+      "criterion": "General to specific questions (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Transcript (5)",
+      "score": 2
+    },
+    {
+      "criterion": "Table easy to read (5)",
+      "score": 5
+    },
+    {
+      "criterion": "Products and features are relevant to what customer wants (8)",
+      "score": 8
+    },
+    {
+      "criterion": "Summarizing critical points of interview (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Clear learning points (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Questions the team still has (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Outline of the next steps (10)",
+      "score": 10
+    },
+    {
+      "criterion": "Recording is present (2)",
+      "score": 2
+    }
+  ],
+  "overall_feedback": "The submission is very strong, with excellent structure, analysis, and planning. The primary areas for improvement are minor grammatical corrections and providing a full transcript instead of summary notes."
+}
