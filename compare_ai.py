@@ -3,6 +3,7 @@ import re
 import pandas as pd
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 import seaborn as sns
 
 GUIDELINE_FILE = "guideline_files/Reference_Grades.csv"
@@ -131,8 +132,12 @@ with open(SUMMARY_FILE, "w") as f:
     for i, (model, _) in enumerate(sorted_models, start=1):
         f.write(f"{i}. {model}\n")
 
-plt.figure(figsize=(8, 5))
-sns.barplot(x=[m for m, _ in sorted_models], y=[a for _, a in sorted_models], hue=[m for m, _ in sorted_models], legend=False)
+models = [m for m, _ in sorted_models]
+accuracies = [a for _, a in sorted_models]
+cmap = LinearSegmentedColormap.from_list("gyr", ["#44ce1b", "yellow", "#e51f1f"])
+colors = [cmap(i / (len(models) - 1)) for i in range(len(models))]
+plt.figure(figsize=(10, 6))
+sns.barplot(x=models, y=accuracies, palette=colors)
 plt.ylabel("Average Similarity (%)")
 plt.title("Model Accuracy Comparison")
 plt.xticks(rotation=60, ha='center')
