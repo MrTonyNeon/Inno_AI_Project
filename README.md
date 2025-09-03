@@ -2,7 +2,7 @@
 
 A tool for automatic anonymization of student PDF papers, their subsequent evaluation using AI models, and comparison of model performance.
 
-# Results
+## Results
 
 ![Research preview](documents/model_accuracy_comparison.png)
 [Download my final research results (PDF)](documents/Comparison_of_different_LLMs_on_grading_automation.pdf)
