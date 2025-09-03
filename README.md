@@ -2,6 +2,10 @@
 
 A tool for automatic anonymization of student PDF papers, their subsequent evaluation using AI models, and comparison of model performance.
 
+# Results
+
+[Download my final research results (PDF)](Comparison_of_different_LLMs_on_grading_automation.pdf)
+
 ## Features
 
 - Processing PDF documents from structured team folders
