@@ -5,7 +5,7 @@ A tool for automatic anonymization of student PDF papers, their subsequent evalu
 ## Results
 
 ![Research preview](documents/model_accuracy_comparison.png)
-[Download my final research results (PDF)](documents/Comparison_of_different_LLMs_on_grading_automation.pdf)
+[Research results (PDF)](documents/Comparison_of_different_LLMs_on_grading_automation.pdf)
 
 ## Features
 
